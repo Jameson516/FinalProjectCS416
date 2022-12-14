@@ -1,0 +1,29 @@
+body
+{
+    background-color: gray;
+    margin-top: 50px;
+    padding-top: 10px;
+}
+.container
+{
+    background-color: lightgrey;
+}
+.update-icon
+{
+    color: #339af0;
+}
+.delete-icon
+{
+    color: #ff6b6b;
+}
+.img-thumbnail
+{
+    margin: 0 auto;
+    display: block;
+    height: 250px;
+    width: 400px;
+}
+.Medal
+{
+    width: 40px;
+}

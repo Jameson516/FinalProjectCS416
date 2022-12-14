@@ -1,0 +1,28 @@
+{% extends "curation/base.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid my-5">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h1>Register</h1>
+
+                        <form action="{% url 'register' %}" method="post" novalidate>
+                            {% csrf_token %}
+                            {{ form.as_div }}
+                            <button type="submit" class="btn btn-primary mt-3">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

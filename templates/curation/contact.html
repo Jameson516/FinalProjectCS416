@@ -1,0 +1,53 @@
+{% extends 'curation/base.html' %}
+
+{% block title %}
+    Contact Us
+{% endblock %}
+
+{% block body %}
+    {% comment %}
+        In case there are errors in validating user data, for each error generate a div tag and show the error message in it
+        the for loop below iterates a dictionary (error messages) where each item consist of
+        a key (e.g., field such as email) and value pair (e.g., Enter a valid email address)
+    {% endcomment %}
+    {% for key, value in form.errors.items %}
+         <div class="alert alert-danger">
+             {{ key }}: {{ value }}
+         </div>
+    {% endfor %}
+
+    <div class="container-fluid my-5">
+        <div class="row my-3 justify-content-center">
+            <div class="col-6">
+                <h1>Contact Us</h1>
+
+                <form action="{% url 'contact' %}" method="post">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col">
+                            {{ form.first_name.label }}
+                            {{ form.first_name }}
+                        </div>
+                        <div class="col">
+                            {{ form.last_name.label }}
+                            {{ form.last_name }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            {{ form.email.label }}
+                            {{ form.email }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            {{ form.message.label }}
+                            {{ form.message }}
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary my-3">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

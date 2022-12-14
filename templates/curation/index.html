@@ -1,0 +1,93 @@
+{% extends "curation/base.html" %}
+{% load static %}
+
+{% block title %}
+    Curation Nation - Home
+{% endblock %}
+
+{% block body %}
+    {# Start Box #}
+    <div class="container my-5 shadow rounded-2 bg-white">
+        <div class="row m-3 align-items-center">
+            <div class="col-lg">
+                <h1 class="fw-bold text-dark text-opacity-75 text-center">
+                    Curation Nation
+                </h1>
+                <p class="lead text-center">
+                    Making and Growing Communities All Around.
+                </p>
+            </div>
+            <div class="col-lg">
+                <img id="random" src="{% static "images/Curate_Logo.jpg" %}" class="img-fluid btn" alt="Community">
+            </div>
+        </div>
+    </div>
+
+    {# Category Boxes #}
+    <div class="container my-5 shadow rounded-2">
+        <div class="row p-3 g-2">
+            {# Part 1 #}
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <a class="navbar-brand" href="https://www.foxnews.com">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">News</h4>
+                        <img id="imgRand1" src="../../static/images/News1.jpg" class="img-fluid img-thumbnail" alt="News">
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <a class="navbar-brand" href="https://www.imdb.com">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Videos</h4>
+                        <img id="imgRand2" src="../../static/images/Movies1.jpg" class="img-fluid img-thumbnail" alt="Videos">
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <a class="navbar-brand" href="https://kotaku.com">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Games</h4>
+                        <img id="imgRand3" src="../../static/images/Games1.jpg" class="img-fluid img-thumbnail" alt="Games">
+                    </div>
+                    </a>
+                </div>
+            </div>
+            {# Part 2 #}
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <a class="navbar-brand" href="https://www.healthline.com/health-news">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Health</h4>
+                        <img id="imgRand4" src="../../static/images/Health1.jpg" class="img-fluid img-thumbnail" alt="Health">
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <a class="navbar-brand" href="https://www.cnbc.com/finance/">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Finance</h4>
+                        <img id="imgRand5" src="../../static/images/Money1.jpg" class="img-fluid img-thumbnail" alt="Finance">
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <a class="navbar-brand" href="https://www.art.com">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Art</h4>
+                        <img id="imgRand6" src="../../static/images/Art1.jpg" class="img-fluid img-thumbnail" alt="Art">
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

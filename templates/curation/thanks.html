@@ -1,0 +1,18 @@
+{% extends 'curation/base.html' %}
+
+{% block title %}
+    Thanks! :)
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid my-5 text-center">
+        <div class="row my-3 justify-content-center">
+            <div class="col-6">
+                <h1>Thank you for contacting us!</h1>
+                <p>You're response has been submitted and is under review.</p>
+                <p>We will respond back to you to resolve your issue ASAP.</p>
+                <a class="btn btn-success" href="{% url 'index' %}">Return to Homepage</a></li>
+            </div>
+        </div>
+    </div>
+{% endblock %}

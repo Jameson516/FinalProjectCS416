@@ -1,0 +1,35 @@
+{% extends 'curation/base.html' %}
+
+{% block title %}
+    Add/Update Category
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid my-5">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h1>Submit a Category</h1>
+
+                        <form method="post" action="">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col">
+                                    {{ form.description.label }}
+                                    <br>
+                                    {{ form.description }}
+                                </div>
+                            </div>
+                            <div class="my-3">
+                                <a href="{% url 'view_category' %}" class="btn btn-info"><i class="fas fa-arrow-left"></i> Go Back</a>
+                                <button type="reset" class="btn btn-warning"><i class="fas fa-redo-alt"></i> Reset</button>
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
